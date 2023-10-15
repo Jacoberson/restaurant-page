@@ -9,6 +9,11 @@ img {
     object-fit: contain;
 }
 
+.blurb-container {
+    border: 1px solid black;
+    padding: 0 20px;
+}
+
 .blurb-author {
     float: right;
 }
