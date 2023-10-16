@@ -10,19 +10,28 @@ const menu = () => {
     const homePageItem = document.createElement('li');
     homePageItem.textContent = 'Home';
     homePageItem.addEventListener('click', () => {
-        console.log('home');
+        menuPageItem.classList.remove('selected');
+        contactPageItem.classList.remove('selected');
+
+        homePageItem.classList.add('selected')
     })
 
     const menuPageItem = document.createElement('li');
     menuPageItem.textContent = 'Menu';
     menuPageItem.addEventListener('click', () => {
-        console.log('menu');
+        homePageItem.classList.remove('selected');
+        contactPageItem.classList.remove('selected');
+
+        menuPageItem.classList.add('selected');
     })
 
     const contactPageItem = document.createElement('li');
     contactPageItem.textContent = 'Contact';
     contactPageItem.addEventListener('click', () => {
-        console.log('contact');
+        homePageItem.classList.remove('selected');
+        menuPageItem.classList.remove('selected');
+
+        contactPageItem.classList.add('selected')
     })
 
     menuBar.appendChild(homePageItem);
@@ -33,6 +42,5 @@ const menu = () => {
     return menuBar;
 }
 
-// content.appendChild(homePage());
 content.appendChild(menu());
-content.appendChild(contactPage());
+content.appendChild(homePage());

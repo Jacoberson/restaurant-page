@@ -1,8 +1,26 @@
+ul, li {
+    list-style: none;
+}
+
+li:hover {
+    cursor: pointer;
+}
+
+.selected {
+    background-color: red;
+}
+
 .home,
 .contact {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
 }
 
 img {
