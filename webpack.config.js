@@ -6,7 +6,7 @@ module.exports = {
     plugins: [
         new HtmlWebpackPlugin({
             title: "Mort's Macarons",
-            template: 'src/template.html'
+            template: './src/template.html'
         }),
     ],
     output: {
