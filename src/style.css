@@ -1,4 +1,5 @@
-.home {
+.home,
+.contact {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -16,4 +17,26 @@ img {
 
 .blurb-author {
     float: right;
+}
+
+.cards {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contact-card {
+    border: 5px solid black;
+    border-radius: 10px;
+    background-color: #c7bcbc;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.contact-image {
+    max-width: 200px;
+    grid-column: 2;
 }
