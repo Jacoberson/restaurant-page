@@ -1,5 +1,6 @@
 import "./style.css";
 import homePage from './pages/homePage/homePage';
+import menuPage from "./pages/menuPage/menuPage";
 import contactPage from './pages/contactPage/contactPage';
 const content = document.getElementById("content");
 
@@ -24,7 +25,7 @@ const menu = () => {
         contactPageItem.classList.remove('selected');
         menuPageItem.classList.add('selected');
 
-        console.log('no content yet');
+        renderContent(menuPage());
     })
 
     const contactPageItem = document.createElement('li');
