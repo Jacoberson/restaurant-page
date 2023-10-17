@@ -6,6 +6,7 @@ import blurbContainer from './components/blurbContainer';
 const homePage = () => {
     const homeContent = document.createElement('div');
     homeContent.classList.add('home');
+    homeContent.classList.add('page-content');
 
     homeContent.appendChild(header());
     homeContent.appendChild(image());
