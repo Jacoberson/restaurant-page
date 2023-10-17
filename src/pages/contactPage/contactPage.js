@@ -6,8 +6,7 @@ import MajorImage from './assets/major-profile.png';
 
 const contactPage = () => {
     const contactContent = document.createElement('div');
-    contactContent.classList.add('contact');
-    contactContent.classList.add('page-content');
+    contactContent.classList.add('contact', 'page-content');
 
     const contactCards = document.createElement('div');
     contactCards.classList.add('cards');
