@@ -12,8 +12,9 @@ const menu = () => {
     homePageItem.addEventListener('click', () => {
         menuPageItem.classList.remove('selected');
         contactPageItem.classList.remove('selected');
-
         homePageItem.classList.add('selected')
+
+        renderContent(homePage());
     })
 
     const menuPageItem = document.createElement('li');
@@ -21,8 +22,9 @@ const menu = () => {
     menuPageItem.addEventListener('click', () => {
         homePageItem.classList.remove('selected');
         contactPageItem.classList.remove('selected');
-
         menuPageItem.classList.add('selected');
+
+        console.log('no content yet');
     })
 
     const contactPageItem = document.createElement('li');
@@ -30,17 +32,28 @@ const menu = () => {
     contactPageItem.addEventListener('click', () => {
         homePageItem.classList.remove('selected');
         menuPageItem.classList.remove('selected');
-
         contactPageItem.classList.add('selected')
+
+        renderContent(contactPage());
     })
 
     menuBar.appendChild(homePageItem);
     menuBar.appendChild(menuPageItem);
     menuBar.appendChild(contactPageItem);
-
+    homePageItem.classList.add('selected');
 
     return menuBar;
 }
 
+const renderContent = (contentToRender = homePage()) => {
+    const previousContent = document.querySelector('.page-content') || null;
+
+    if (previousContent) {
+        content.removeChild(previousContent);
+    }
+
+    content.appendChild(contentToRender);
+}
+
 content.appendChild(menu());
-content.appendChild(homePage());
+renderContent();
