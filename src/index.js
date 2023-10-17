@@ -6,7 +6,7 @@ const content = document.getElementById("content");
 
 const menu = () => {
     const menuBar = document.createElement('ul');
-    menuBar.classList.add('menu');
+    menuBar.classList.add('menu-bar');
 
     const homePageItem = document.createElement('li');
     homePageItem.textContent = 'Home';

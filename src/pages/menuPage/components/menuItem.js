@@ -3,7 +3,7 @@ const menuItem = (name, price, image) => {
     card.classList.add('menu-card');
 
     const cardText = document.createElement('div');
-    cardText.classList.add('cardText');
+    cardText.classList.add('card-text', 'menu-card-text');
 
     const cardName = document.createElement('h3');
     cardName.textContent = name;
@@ -11,7 +11,7 @@ const menuItem = (name, price, image) => {
 
     const cardPrice = document.createElement('p');
     cardPrice.textContent = `$${price}`;
-    cardPrice.classList.add('menu-item');
+    cardPrice.classList.add('menu-item', 'menu-price');
 
     cardText.appendChild(cardName);
     cardText.appendChild(cardPrice);

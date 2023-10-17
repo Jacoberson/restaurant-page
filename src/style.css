@@ -1,4 +1,5 @@
-ul, li {
+ul,
+li {
     list-style: none;
 }
 
@@ -6,26 +7,28 @@ li:hover {
     cursor: pointer;
 }
 
-.selected {
-    background-color: red;
-}
-
-.home,
-.contact {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.menu {
+.menu-bar {
     display: flex;
     justify-content: center;
     gap: 40px;
 }
 
+.selected {
+    background-color: red;
+}
+
+.home,
+.contact,
+.menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 img {
     width: 80%;
     object-fit: contain;
+    border-radius: 10px;
 }
 
 .blurb-container {
@@ -43,7 +46,7 @@ img {
     gap: 20px;
 }
 
-.contact-card {
+.contact-card, .menu-card {
     border: 5px solid black;
     border-radius: 10px;
     background-color: #c7bcbc;
@@ -54,7 +57,17 @@ img {
     padding-bottom: 20px;
 }
 
-.contact-image {
+.contact-image, .menu-image {
     max-width: 200px;
     grid-column: 2;
+}
+
+.menu-price {
+    text-align: center;
+}
+
+.menu-card-text {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
