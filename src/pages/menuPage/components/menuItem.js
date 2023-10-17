@@ -10,8 +10,8 @@ const menuItem = (name, price, image) => {
     cardName.classList.add('menu-item');
 
     const cardPrice = document.createElement('p');
-    cardTitle.textContent = `$${price}`;
-    cardTitle.classList.add('menu-item');
+    cardPrice.textContent = `$${price}`;
+    cardPrice.classList.add('menu-item');
 
     cardText.appendChild(cardName);
     cardText.appendChild(cardPrice);
