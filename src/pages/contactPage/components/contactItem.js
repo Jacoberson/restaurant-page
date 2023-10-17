@@ -3,7 +3,7 @@ const contactItem = (name, title, number, email, image) => {
     card.classList.add('contact-card')
 
     const cardText = document.createElement('div');
-    cardText.classList.add('card-text');
+    cardText.classList.add('card-text', 'contact-card-text');
 
     const cardName = document.createElement('h3');
     cardName.textContent = name;

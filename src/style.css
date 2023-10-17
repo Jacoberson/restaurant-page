@@ -1,3 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root {
+    --main-border-radius: 10px;
+    --main-spacing: 20px;
+}
+
+* {
+    font-family: 'Roboto', sans-serif;
+    background-color: #cecece;
+}
+
+h1 {
+    font-family: 'Dancing Script', 'Roboto', sans-serif;
+    margin-top: 0;
+    padding: var(--main-spacing);
+    border: 1px solid black;
+    border-radius: var(--main-border-radius);
+}
+
 ul,
 li {
     list-style: none;
@@ -15,6 +36,8 @@ li:hover {
 
 .selected {
     background-color: red;
+    padding: 10px;
+    border-radius: var(--main-border-radius);
 }
 
 .home,
@@ -28,46 +51,60 @@ li:hover {
 img {
     width: 80%;
     object-fit: contain;
-    border-radius: 10px;
+    border-radius: var(--main-border-radius);
 }
 
 .blurb-container {
     border: 1px solid black;
-    padding: 0 20px;
+    padding: 0 var(--main-spacing);
 }
 
 .blurb-author {
+    font-family: 'Dancing Script', 'Roboto', sans-serif;
+    font-size: 20px;
     float: right;
 }
 
 .cards {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: var(--main-spacing);
 }
 
-.contact-card, .menu-card {
+.contact-card,
+.menu-card {
     border: 5px solid black;
-    border-radius: 10px;
+    border-radius: var(--main-border-radius);
     background-color: #c7bcbc;
     display: grid;
     grid-template-columns: 1fr 1fr;
     justify-items: center;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding: var(--main-spacing) 10px;
 }
 
-.contact-image, .menu-image {
+.contact-image,
+.menu-image {
     max-width: 200px;
     grid-column: 2;
+    background-color: inherit;
+}
+
+.menu-card-text {
+    display: flex;
+    flex-direction: column;
+    gap: var(--main-spacing);
+    background-color: inherit;
+}
+
+.contact-card-text {
+    background-color: inherit;
 }
 
 .menu-price {
     text-align: center;
 }
 
-.menu-card-text {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+.menu-item,
+.contact-item {
+    background-color: inherit;
 }
